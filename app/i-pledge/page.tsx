@@ -137,7 +137,7 @@ const page = () => {
               <Button
                 className="w-[80%] bg-red-400 hover:bg-red-00/70"
                 onClick={() => {
-                  setImage("")
+                  window.location.reload()
                 }}
               >
                 Retake Picture
