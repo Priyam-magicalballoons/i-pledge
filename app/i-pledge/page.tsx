@@ -10,7 +10,13 @@ const page = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [image, setImage] = useState<string | null>(null);
   const [cameraMode, setCameraMode] = useState("environment")
-const data = JSON.parse(localStorage.getItem("DD")!)
+  let data;
+
+  useEffect(()=>{
+    if(typeof window !== 'undefined')
+      data = JSON.parse(localStorage.getItem("DD")!)
+  },[])
+
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
