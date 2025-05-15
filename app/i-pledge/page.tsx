@@ -6,7 +6,7 @@ import { useSearchParams } from 'next/navigation';
 import React, { useEffect, useRef, useState } from 'react'
 
 const page = () => {
-    const [isCapturing, setIsCapturing] = useState(false);
+    const [isCapturing, setIsCapturing] = useState(true);
   const imageRef = useRef<HTMLDivElement | null>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [image, setImage] = useState<string | null>(null);
@@ -19,7 +19,6 @@ const page = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    console.log(cameraMode)
     if (typeof window !== "undefined" && navigator.mediaDevices?.getUserMedia) {
       navigator.mediaDevices
         .getUserMedia({
@@ -65,13 +64,13 @@ const page = () => {
   };
   return (
     <div>
-        <Button
+        {/* <Button
               variant="outline"
               className={`self-center shadow-md py-10 w-[80%]  bg-gray-100 border-2 border-black`}
               onClick={() => setIsCapturing(true)}
             >
               <Camera /> Capture Doctor Image
-            </Button>
+            </Button> */}
         {isCapturing && (
             <div className="relative w-full max-w-[600px]" ref={imageRef}>
               <img
@@ -126,13 +125,12 @@ const page = () => {
                 className="w-[80%] bg-red-400 hover:bg-red-00/70"
                 onClick={() => {
                   setImage("")
-                  setIsCapturing(false)
                 }}
               >
                 Retake Picture
               </Button>
               <Button className="w-[80%]"
-              //  onClick={handleDownload}
+            //    onClick={handleDownload}
                >
                 Download I-Pledge
               </Button>

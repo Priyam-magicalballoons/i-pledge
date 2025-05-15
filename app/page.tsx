@@ -2,14 +2,22 @@
 
 import { Button } from "@/components/ui/button"
 import CustomInput from "@/components/ui/custumInput/CustomInput"
-import { Camera } from "lucide-react"
-import { redirect } from "next/navigation"
+import {  useRouter } from "next/navigation"
 import {  useState } from "react"
+import { toast } from "sonner"
 
 
 const page = () => {
   const [name, setName] = useState("")
   const [other, setOther] = useState("")
+  const router = useRouter()
+
+  const handleSubmit = ()=>{
+    if(!name){
+      return toast("kindly enter the name!")
+    }
+    router.push(`/i-pledge?name=${name}&other=${other}`)
+  }
   
   return (
     <div className="flex items-center justify-center w-full h-screen flex-col py-10">
@@ -19,7 +27,7 @@ const page = () => {
       <CustomInput id="other" onchange={(e)=>setOther(e as string)} placeholder="Enter Designation/Organisation/Speciality" value={other} />
       </div>
         <div>
-      <Button onClick={()=>redirect(`/i-pledge?name=${name}&other=${other}`)}>Generate I-Pledge</Button>
+      <Button onClick={handleSubmit}>Generate I-Pledge</Button>
         </div>
     </div>
   )
