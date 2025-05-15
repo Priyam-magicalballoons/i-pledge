@@ -30,7 +30,7 @@ const page = () => {
           video: {
             width: { ideal: 300 },
             height: { ideal: 300 },
-            facingMode: "environment",
+            facingMode: "user",
           },
           audio: false,
         })
@@ -113,7 +113,8 @@ const page = () => {
                     />
                   )}
                 </div>
-                <p className='absolute -bottom-30 text-white font-semibold text-xl'>DR. -  {data?.name}</p>
+                <p className='absolute -bottom-30 text-white font-semibold text-xl'>
+                     {data?.name}</p>
                 <p className='absolute -bottom-36 text-white font-semibold text-xl'>  {data?.other}</p>
               </div>
               <div className={`w-full pt-5 flex justify-center ${image && "hidden"}`}>
