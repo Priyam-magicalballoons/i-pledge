@@ -121,9 +121,9 @@ const Page = () => {
         </div>
 
         {/* Text Overlay */}
-        <div className="absolute w-full top-[76%] z-20 text-center">
-          <p className="font-bold text-xl text-rose-700">{data.name}</p>
-          <p className="font-bold text-lg text-rose-700">{data.other}</p>
+        <div className="absolute w-full top-[82%] z-20 text-center">
+          <p className="font-bold text-2xl text-rose-700">{data.name}</p>
+          <p className="font-bold text-xl text-rose-700">{data.other}</p>
         </div>
 
         {/* Hidden canvas for capture */}
@@ -131,7 +131,7 @@ const Page = () => {
 
         {/* Capture Button (only if not captured) */}
         {!image && (
-          <div className="absolute w-full left-0 bottom-4 flex justify-center z-30">
+          <div className="w-full left-0 bottom-0 flex justify-center z-30">
             <Button
               onClick={captureImage}
               className="px-4 py-2 bg-[#0c61aa] text-white rounded w-[80%]"
