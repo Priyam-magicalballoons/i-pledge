@@ -2,7 +2,6 @@
 
 import { Button } from '@/components/ui/button';
 import { Camera } from 'lucide-react';
-import { useSearchParams } from 'next/navigation';
 import React, { useEffect, useRef, useState } from 'react'
 
 const page = () => {
@@ -11,11 +10,7 @@ const page = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [image, setImage] = useState<string | null>(null);
   const [cameraMode, setCameraMode] = useState("environment")
-  const searchParam = useSearchParams()
-  const name=  searchParam.get("name")
-  const other = searchParam.get("other")
-
-  console.log(name,other)
+const data = JSON.parse(localStorage.getItem("DD")!)
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {

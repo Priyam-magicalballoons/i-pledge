@@ -16,7 +16,11 @@ const page = () => {
     if(!name){
       return toast("kindly enter the name!")
     }
-    router.push(`/i-pledge?name=${name}&other=${other}`)
+    localStorage.setItem("DD",JSON.stringify({
+      name,
+      other
+    }))
+    router.push(`/i-pledge`)
   }
   
   return (
