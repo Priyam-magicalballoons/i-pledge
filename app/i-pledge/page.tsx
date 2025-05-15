@@ -12,11 +12,13 @@ const page = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [image, setImage] = useState<string | null>(null);
   const [cameraMode, setCameraMode] = useState("environment")
-  let data;
-
+  const [data, setData] = useState({
+    name : "",
+    other : ""
+  })
   useEffect(()=>{
     if(typeof window !== 'undefined')
-      data = JSON.parse(localStorage.getItem("DD")!)
+      setData(JSON.parse(localStorage.getItem("DD")!))
   },[])
 
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -75,13 +77,6 @@ const page = () => {
   };
   return (
     <div>
-        {/* <Button
-              variant="outline"
-              className={`self-center shadow-md py-10 w-[80%]  bg-gray-100 border-2 border-black`}
-              onClick={() => setIsCapturing(true)}
-            >
-              <Camera /> Capture Doctor Image
-            </Button> */}
         {isCapturing && (
             <div className="relative w-full max-w-[600px]" ref={imageRef}>
               <img
@@ -118,6 +113,8 @@ const page = () => {
                     />
                   )}
                 </div>
+                <p className='absolute -bottom-30 text-white font-semibold text-xl'>DR. -  {data?.name}</p>
+                <p className='absolute -bottom-36 text-white font-semibold text-xl'>  {data?.other}</p>
               </div>
               <div className={`w-full pt-5 flex justify-center ${image && "hidden"}`}>
               <Button
