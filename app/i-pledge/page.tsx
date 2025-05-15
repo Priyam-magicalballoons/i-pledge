@@ -1,6 +1,7 @@
 "use client"
 
 import { Button } from '@/components/ui/button';
+import { toPng } from 'html-to-image';
 import { Camera } from 'lucide-react';
 import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react'
@@ -63,6 +64,14 @@ const page = () => {
     // Convert to base64 image
     const dataUrl = canvas.toDataURL("image/png");
     setImage(dataUrl);
+  };
+
+  const handleDownload = async () => {
+    const dataUrl = await toPng(imageRef.current!);
+    const link = document.createElement("a");
+    link.href = dataUrl;
+    link.download = "i-pledge.png";
+    link.click();
   };
   return (
     <div>
@@ -134,7 +143,7 @@ const page = () => {
                 Retake Picture
               </Button>
               <Button className="w-[80%]"
-            //    onClick={handleDownload}
+               onClick={handleDownload}
                >
                 Download I-Pledge
               </Button>
