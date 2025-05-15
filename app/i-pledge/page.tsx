@@ -84,7 +84,7 @@ const Page = () => {
 
         {/* Camera/Captured Image Overlay (positioned absolutely on the poster) */}
         <div
-          className="absolute z-10 rounded-full border-red-500 border bg-yellow-500 overflow-hidden"
+          className="absolute z-10 rounded-full overflow-hidden"
           style={{
             // Adjust these values to position/size the camera overlay on your poster
             top: "30.7%",    // vertical position (as % of poster height)
