@@ -86,10 +86,9 @@ const Page = () => {
         <div
           className="absolute z-10 rounded-full overflow-hidden"
           style={{
-            // Adjust these values to position/size the camera overlay on your poster
-            top: "30.7%",    // vertical position (as % of poster height)
-            left: "35.4%",   // horizontal position (as % of poster width)
-            width: "30%",    // width (as % of poster width)
+            top: "30.7%",  
+            left: "35.4%",  
+            width: "30%",    
             aspectRatio: "1 / 1",
             height: "auto",
             display: "flex",
@@ -102,7 +101,6 @@ const Page = () => {
             )
           }
         >
-          {/* Both video and img use the same styling */}
           {image ? (
             <img
               src={image}
@@ -133,7 +131,7 @@ const Page = () => {
 
         {/* Capture Button (only if not captured) */}
         {!image && (
-          <div className="w-full  left-0 -bottom-10 flex justify-center z-30 absolute">
+          <div className="w-full  left-0 -bottom-20 flex justify-center z-30 absolute">
             <Button
               onClick={captureImage}
               className="px-4 py-2 bg-[#0c61aa] text-white rounded w-[80%]"
