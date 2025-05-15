@@ -38,9 +38,9 @@ const page = () => {
       <div className="flex flex-col w-full md:w-1/2 lg:w-1/3 items-center gap-5 justify-start h-[85%] md:border border-b-0 border-none rounded-tr-lg rounded-tl-lg">
         <h2 className="text-3xl font-semibold py-10">Fill the Details</h2>
         <div className="w-full justify-center flex flex-row items-center relative left-8">
-  <div className="w-[13%] flex items-center">
+  <div className="w-[18%] flex items-center">
     <Select onValueChange={(e)=>setSelectValue(e)}>
-      <SelectTrigger className="w-full border-t-0 border-l-0 border-r-0 rounded-none shadow-none relative top-[6.5px] left-2 text-black border-b border-black [&>svg]:hidden -space-y-3 text-lg" >
+      <SelectTrigger className="w-full border-t-0 border-l-0 border-r-0 rounded-none shadow-none relative top-[6.5px] left-2 text-black border-b border-black [&>svg]:relative [&>svg]:-left-1 [&>svg]:top-2 -space-y-3 text-lg" >
         <SelectValue placeholder="Mr." className="text-black text-xl"  />
       </SelectTrigger>
       <SelectContent className="">
