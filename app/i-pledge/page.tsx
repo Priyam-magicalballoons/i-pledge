@@ -88,7 +88,7 @@ const Page = () => {
           style={{
             // Adjust these values to position/size the camera overlay on your poster
             top: "30.7%",    // vertical position (as % of poster height)
-            left: "35.6%",     // horizontal position (as % of poster width)
+            left: "35.4%",     // horizontal position (as % of poster width)
             width: "30%",    // width (as % of poster width)
             aspectRatio: "1 / 1",
             overflow: "hidden",
