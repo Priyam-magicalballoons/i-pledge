@@ -2,6 +2,7 @@
 
 import { Button } from '@/components/ui/button';
 import { Camera } from 'lucide-react';
+import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react'
 
 const page = () => {
@@ -74,10 +75,12 @@ const page = () => {
             </Button> */}
         {isCapturing && (
             <div className="relative w-full max-w-[600px]" ref={imageRef}>
-              <img
+              <Image
                 src="/poster.png"
                 alt="Poster"
                 className="w-full h-auto block"
+                height={100}
+                width={100}
               />
               <div
                 className="absolute"
