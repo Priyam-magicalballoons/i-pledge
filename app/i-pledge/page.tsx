@@ -71,7 +71,7 @@ const Page = () => {
   return (
     <div className="flex flex-col items-center justify-center">
       <div
-        className="relative w-full max-w-[600px] aspect-[3/4] mx-auto"
+        className="relative w-full max-w-[600px] aspect-[3/4]"
         ref={imageRef}
         style={{ background: "#f9f9f9" }}
       >
@@ -79,20 +79,19 @@ const Page = () => {
         <img
           src="/image.png"
           alt="Poster"
-          className="w-full h-full object-cover block rounded-lg"
+          className="w-full h-full object-cover rounded-lg"
         />
 
         {/* Camera/Captured Image Overlay (positioned absolutely on the poster) */}
         <div
-          className="absolute z-10 rounded-full border-red-500 border"
+          className="absolute z-10 rounded-full border-red-500 border bg-yellow-500 overflow-hidden"
           style={{
             // Adjust these values to position/size the camera overlay on your poster
             top: "30.7%",    // vertical position (as % of poster height)
-            left: "35.4%",     // horizontal position (as % of poster width)
+            left: "35.4%",   // horizontal position (as % of poster width)
             width: "30%",    // width (as % of poster width)
             aspectRatio: "1 / 1",
-            overflow: "hidden",
-            background: "#222",
+            height: "auto",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -103,11 +102,13 @@ const Page = () => {
             )
           }
         >
+          {/* Both video and img use the same styling */}
           {image ? (
             <img
               src={image}
               alt="Captured"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover rounded-full"
+              style={{ aspectRatio: "1 / 1" }}
             />
           ) : (
             <video
@@ -116,6 +117,7 @@ const Page = () => {
               muted
               playsInline
               className="w-full h-full object-cover rounded-full"
+              style={{ aspectRatio: "1 / 1" }}
             />
           )}
         </div>
@@ -131,7 +133,7 @@ const Page = () => {
 
         {/* Capture Button (only if not captured) */}
         {!image && (
-          <div className="w-full left-0 bottom-0 flex justify-center z-30">
+          <div className="w-full  left-0 -bottom-10 flex justify-center z-30 absolute">
             <Button
               onClick={captureImage}
               className="px-4 py-2 bg-[#0c61aa] text-white rounded w-[80%]"
