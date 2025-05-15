@@ -76,7 +76,7 @@ const page = () => {
         {isCapturing && (
             <div className="relative w-full max-w-[600px]" ref={imageRef}>
               <Image
-                src="/poster.png"
+                src="/Poster.png"
                 alt="Poster"
                 className="w-full h-auto block"
                 height={100}
