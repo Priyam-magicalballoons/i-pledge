@@ -24,14 +24,14 @@ const page = () => {
   }
   
   return (
-    <div className="flex items-center justify-center w-full h-screen flex-col py-10">
-      <div className="flex flex-col w-full md:w-1/2 lg:w-1/3 items-center gap-5 justify-start h-full flex-1">
-      <h2 className="text-3xl font-semibold">Fill the Details</h2>
+    <div className="flex items-center w-full  min-h-screen max-h-screen h-screen flex-col">
+      <div className="flex flex-col w-full md:w-1/2 lg:w-1/3 items-center gap-5 justify-start h-[85%]">
+      <h2 className="text-3xl font-semibold py-10">Fill the Details</h2>
       <CustomInput id="name" onchange={(e)=>setName(e as string)} placeholder="Enter doctor name" value={name} />
       <CustomInput id="other" onchange={(e)=>setOther(e as string)} placeholder="Enter Designation/Organisation/Speciality" value={other} />
       </div>
-        <div>
-      <Button onClick={handleSubmit}>Generate I-Pledge</Button>
+        <div className="w-full flex justify-center">
+      <Button className="w-[80%]" onClick={handleSubmit}>Generate I-Pledge</Button>
         </div>
     </div>
   )

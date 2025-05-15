@@ -84,12 +84,10 @@ const page = () => {
             </Button> */}
         {isCapturing && (
             <div className="relative w-full max-w-[600px]" ref={imageRef}>
-              <Image
+              <img
                 src="/Poster.png"
                 alt="Poster"
                 className="w-full h-auto block"
-                height={100}
-                width={100}
               />
               <div
                 className="absolute"
