@@ -34,14 +34,14 @@ const page = () => {
   };
 
   return (
-    <div className="flex items-center w-full  min-h-screen max-h-screen h-screen flex-col pt-1">
-      <div className="flex flex-col w-full md:w-1/2 lg:w-1/3 items-center gap-5 justify-start h-[85%] md:border border-b-0 border-none rounded-tr-lg rounded-tl-lg">
+    <div className="flex items-center w-full  min-h-screen max-h-screen h-screen flex-col pt-1 bg-[url('/banner-image.png')] bg-no-repeat">
+      <div className="flex flex-col w-full md:w-1/2 lg:w-1/3 items-center gap-5 justify-start h-[85%] md:border ">
         <h2 className="text-3xl font-semibold py-10">Fill the Details</h2>
         <div className="w-full justify-center flex flex-row items-center relative left-8">
   <div className="w-[18%] flex items-center">
     <Select onValueChange={(e)=>setSelectValue(e)}>
       <SelectTrigger className="w-full border-t-0 border-l-0 border-r-0 rounded-none shadow-none relative top-[6.5px] left-2 text-black border-b border-black [&>svg]:relative [&>svg]:-left-1 [&>svg]:top-2 -space-y-3 text-lg" >
-        <SelectValue placeholder="Mr." className="text-black text-xl"  />
+        <SelectValue placeholder="Mr." className="text-black text-xl relative"  />
       </SelectTrigger>
       <SelectContent className="">
         <SelectItem value="Mr.">Mr.</SelectItem>
@@ -68,7 +68,7 @@ const page = () => {
           value={other}
         />
       </div>
-      <div className=" w-full md:w-1/2 lg:w-1/3 flex justify-center border border-t-0 pb-2 shadow-lg  rounded-br-lg rounded-bl-lg">
+      <div className=" w-full md:w-1/2 lg:w-1/3 flex justify-center  rounded-br-lg rounded-bl-lg">
         <Button className="w-[80%] " onClick={handleSubmit}>
           Generate I-Pledge
         </Button>
