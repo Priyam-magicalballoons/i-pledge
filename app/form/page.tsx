@@ -69,7 +69,7 @@ const page = () => {
         />
       </div>
       <div className=" w-full md:w-1/2 lg:w-1/3 flex justify-center  rounded-br-lg rounded-bl-lg">
-        <Button className="w-[80%] " onClick={handleSubmit}>
+        <Button className="w-[80%] bg-red-700 active:bg-red-700/50" onClick={handleSubmit}>
           Generate I-Pledge
         </Button>
       </div>

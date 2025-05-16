@@ -134,7 +134,7 @@ const Page = () => {
           <div className="w-full  left-0 -bottom-20 flex justify-center z-30 absolute">
             <Button
               onClick={captureImage}
-              className="px-4 py-2 bg-[#0c61aa] text-white rounded w-[80%]"
+              className="px-4 py-2 bg-red-700 active:bg-red-700/50 text-white rounded w-[80%]"
             >
               Capture Photo
             </Button>
