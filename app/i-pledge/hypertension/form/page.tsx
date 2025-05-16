@@ -37,7 +37,7 @@ const page = () => {
         other,
       })
     );
-    router.push(`/i-pledge`);
+    router.push(`/i-pledge/hypertension/poster`);
   };
 
   return (

@@ -19,7 +19,7 @@ const page = () => {
       />
       <div className='py-5 pt-20 w-full justify-center flex h-full relative bottom-0 bg-[#fdd0cd]'>
       <Button onClick={()=>router.push(
-        "/form"
+        "/i-pledge/hypertension/form"
       )} className='py-5 w-2/3 bg-red-700 active:bg-red-700/50 focus:bg-red-700'>
         Continue <ArrowRight />
       </Button>
