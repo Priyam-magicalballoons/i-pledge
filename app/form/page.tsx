@@ -52,7 +52,7 @@ const page = () => {
       </SelectTrigger>
       <SelectContent className="">
         <SelectItem value="Mr.">Mr.</SelectItem>
-        <SelectItem value="Mrs.">Mrs.</SelectItem>
+        <SelectItem value="Mrs.">Ms.</SelectItem>
         <SelectItem value="Dr.">Dr.</SelectItem>
       </SelectContent>
     </Select>
