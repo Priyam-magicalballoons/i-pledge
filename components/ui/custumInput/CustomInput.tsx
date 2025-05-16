@@ -22,7 +22,7 @@ const CustomInput = ({ onchange, placeholder, type = "text", value, id }: InputP
       />
       <label
         htmlFor={id}
-        className="absolute left-0 top-1 text-gray-500 text-sm transition-all peer-placeholder-shown:top-6 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-1 peer-focus:text-sm peer-focus:text-gray-500 duration-300"
+        className="absolute left-0 top-1 text-gray-500 text-sm transition-all peer-placeholder-shown:top-6 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-1 peer-focus:text-sm peer-focus:text-gray-500 duration-300 truncate line-clamp-1"
       >
         {placeholder}
       </label>
