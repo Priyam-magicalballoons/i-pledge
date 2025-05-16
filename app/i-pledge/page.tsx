@@ -121,9 +121,9 @@ const Page = () => {
         </div>
 
         {/* Text Overlay */}
-        <div className="absolute w-full top-[87%] z-20 text-center">
-          <p className="font-bold text-sm text-[#6d242c]">{data.name}</p>
-          <p className="font-bold text-sm text-[#6d242c]">{data.other}</p>
+        <div className="absolute w-full top-[89%] z-20 text-center leading-4.5">
+          <p className="font-bold text-[15px] text-[#6d242c]">{data.name}</p>
+          <p className="font-bold text-[15px] text-[#6d242c]">{data.other}</p>
         </div>
 
         {/* Hidden canvas for capture */}
