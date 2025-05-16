@@ -21,7 +21,9 @@ const page = () => {
 
   const handleSubmit = () => {
     if (!name) {
-      return toast("kindly enter the name!");
+      return toast("kindly enter the name!",{
+        position : "top-center"
+      });
     }
     localStorage.setItem(
       "DD",
@@ -34,11 +36,11 @@ const page = () => {
   };
 
   return (
-    <div className="flex items-center w-full  min-h-screen max-h-screen h-screen flex-col pt-1 bg-[url('/banner-image.png')] bg-no-repeat">
-      <div className="flex flex-col w-full md:w-1/2 lg:w-1/3 items-center gap-5 justify-start h-[85%] md:border ">
+    <div className="flex items-center w-full h-screen flex-col pt-1 bg-[url('/banner-image.png')] bg-no-repeat overflow-hidden ">
+      <div className="flex flex-col w-full md:w-1/2 lg:w-1/3 items-center gap-5 justify-start md:border h-[85vh]">
         <h2 className="text-3xl font-semibold py-10">Fill the Details</h2>
-        <div className="w-full justify-center flex flex-row items-center relative left-8">
-  <div className="w-[18%] flex items-center">
+        <div className="w-full justify-center flex flex-row items-center  pl-8">
+  <div className=" flex items-center">
     <Select onValueChange={(e)=>setSelectValue(e)}>
       <SelectTrigger className="w-full border-t-0 border-l-0 border-r-0 rounded-none shadow-none relative top-[6.5px] left-2 text-black border-b border-black [&>svg]:relative [&>svg]:-left-1 [&>svg]:top-2 -space-y-3 text-lg" >
         <SelectValue placeholder="Mr." className="text-black text-xl relative"  />
@@ -68,7 +70,7 @@ const page = () => {
           value={other}
         />
       </div>
-      <div className=" w-full md:w-1/2 lg:w-1/3 flex justify-center  rounded-br-lg rounded-bl-lg">
+      <div className="w-full md:w-1/2 lg:w-1/3 flex justify-center  rounded-br-lg rounded-bl-lg">
         <Button className="w-[80%] bg-red-700 active:bg-red-700/50" onClick={handleSubmit}>
           Generate I-Pledge
         </Button>

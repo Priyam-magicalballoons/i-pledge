@@ -69,7 +69,7 @@ const Page = () => {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center h-screen">
       <div
         className="relative w-full max-w-[600px] aspect-[3/4]"
         ref={imageRef}
@@ -78,13 +78,13 @@ const Page = () => {
         {/* Background Image */}
         <img
           src="/image-2.png"
-          alt="Poster"
+          alt="bg-image"
           className="w-full h-full object-cover rounded-lg"
         />
 
         {/* Camera/Captured Image Overlay (positioned absolutely on the poster) */}
         <div
-          className="absolute z-10 rounded-full overflow-hidden bg-amber-600"
+          className="absolute z-10 rounded-full overflow-hidden"
           style={{
             top: "35.5%",  
             left: "35.4%",  
@@ -131,10 +131,10 @@ const Page = () => {
 
         {/* Capture Button (only if not captured) */}
         {!image && (
-          <div className="w-full  left-0 -bottom-20 flex justify-center z-30 absolute">
+          <div className="w-full left-0 -bottom-20 flex justify-center z-30 absolute">
             <Button
               onClick={captureImage}
-              className="px-4 py-2 bg-red-700 active:bg-red-700/50 text-white rounded w-[80%]"
+              className="px-4 py-2 bg-red-700 active:bg-red-700/50  rounded w-[80%]"
             >
               Capture Photo
             </Button>
@@ -146,12 +146,12 @@ const Page = () => {
       {image && (
         <div className="py-2 flex flex-col gap-2 w-full items-center">
           <Button
-            className="w-[80%] bg-red-400"
+            className="w-[80%]"
             onClick={() => window.location.reload()}
           >
             Retake Picture
           </Button>
-          <Button className="w-[80%]" onClick={handleDownload}>
+          <Button className="w-[80%] bg-red-700 active:bg-red-700/50" onClick={handleDownload}>
             Download I-Pledge
           </Button>
         </div>
