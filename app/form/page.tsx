@@ -55,7 +55,7 @@ const page = () => {
     <CustomInput
       id="name"
       onchange={(e) => setName(e as string)}
-      placeholder="Enter doctor name"
+      placeholder="Enter name"
       value={name}
     />
   </div>
