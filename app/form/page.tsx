@@ -22,7 +22,12 @@ const page = () => {
   const handleSubmit = () => {
     if (!name) {
       return toast("kindly enter the name!",{
-        position : "top-center"
+        position : "top-center",
+        className : "bg-red-700",
+        style : {
+          background : "red",
+          color : "white",
+        }
       });
     }
     localStorage.setItem(
