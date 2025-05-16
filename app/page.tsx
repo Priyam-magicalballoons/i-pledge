@@ -20,7 +20,7 @@ const page = () => {
       <div className='py-5 pt-10 w-full justify-center flex'>
       <Button onClick={()=>router.push(
         "/form"
-      )} className='py-5 w-2/3 bg-red-700 active:bg-red-700/50'>
+      )} className='py-5 w-2/3 bg-red-700 active:bg-red-700/50 focus:bg-red-700'>
         Continue <ArrowRight />
       </Button>
       </div>

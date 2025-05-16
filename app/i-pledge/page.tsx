@@ -134,7 +134,7 @@ const Page = () => {
           <div className="w-full left-0 -bottom-20 flex justify-center z-30 absolute">
             <Button
               onClick={captureImage}
-              className="px-4 py-2 bg-red-700 active:bg-red-700/50  rounded w-[80%]"
+              className="px-4 py-2 bg-red-700 active:bg-red-700/50 focus:bg-red-700 rounded w-[80%]"
             >
               Capture Photo
             </Button>
@@ -151,7 +151,7 @@ const Page = () => {
           >
             Retake Picture
           </Button>
-          <Button className="w-[80%] bg-red-700 active:bg-red-700/50" onClick={handleDownload}>
+          <Button className="w-[80%] bg-red-700 active:bg-red-700/50 focus:bg-red-700" onClick={handleDownload}>
             Download I-Pledge
           </Button>
         </div>
