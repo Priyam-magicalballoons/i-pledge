@@ -77,16 +77,16 @@ const Page = () => {
       >
         {/* Background Image */}
         <img
-          src="/image.png"
+          src="/image-2.png"
           alt="Poster"
           className="w-full h-full object-cover rounded-lg"
         />
 
         {/* Camera/Captured Image Overlay (positioned absolutely on the poster) */}
         <div
-          className="absolute z-10 rounded-full overflow-hidden"
+          className="absolute z-10 rounded-full overflow-hidden bg-amber-600"
           style={{
-            top: "30.7%",  
+            top: "35.5%",  
             left: "35.4%",  
             width: "30%",    
             aspectRatio: "1 / 1",
@@ -121,7 +121,7 @@ const Page = () => {
         </div>
 
         {/* Text Overlay */}
-        <div className="absolute w-full top-[82%] z-20 text-center">
+        <div className="absolute w-full top-[87%] z-20 text-center">
           <p className="font-bold text-sm text-[#6d242c]">{data.name}</p>
           <p className="font-bold text-sm text-[#6d242c]">{data.other}</p>
         </div>
